@@ -1,5 +1,14 @@
-import Human from './user';
+import Developer from './developer';
 
-const h = new Human('Vasya', 'Pupkin');
+const dev = new Developer('Jen', 'Koshits');
 
-alert(h.sayHi());
+let info = dev.showInfo();
+let div = document.createElement('div');
+let date = new Date();
+
+div.innerHTML = info;
+document.body.appendChild(div);
+
+div.onclick = (event) => event.target = alert(date);
+
+
