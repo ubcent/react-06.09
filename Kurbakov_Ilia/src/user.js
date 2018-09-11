@@ -1,6 +1,6 @@
 import './user.css';
 
-export default class Human{
+export class Human{
     constructor(firstname,lastname){
         this.firstname = firstname;
         this.lastname = lastname;
