@@ -1,0 +1,15 @@
+.header {
+  background-color: cornflowerblue;
+}
+
+.header--big {
+  height: 500px;
+}
+
+.header--medium {
+  height: 300px;
+}
+
+.header-small {
+  height: 150px;
+}
