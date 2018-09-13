@@ -4,7 +4,7 @@ export class User{
         this.lastName=lastName;
         this.age=age;
     }
-    displayDeveloper(){
+    displayUserName(){
         alert(`Hello, I'm ${this.firstName} ${this.lastName}`);
     }
 }

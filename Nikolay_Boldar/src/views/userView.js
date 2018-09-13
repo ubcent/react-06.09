@@ -7,11 +7,11 @@ export class UserView {
     }
     render(){
         const mainElement=document.querySelector(`#${this.elementId}`);
-        let name;
-        let currentTime;
+        let name='';
+        let currentTime='';
 
         if (this.isShowTime===true){
-            currentTime=new Date();
+             currentTime=new Date();
         }
         if (this.isShowName===true){
             name=`${this.model.firstName} ${this.model.lastName}`;
