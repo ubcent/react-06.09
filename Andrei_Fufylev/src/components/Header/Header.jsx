@@ -17,37 +17,23 @@ export default class Header extends Component {
         size: 'small',
     };
 
-    handleClick(creator) {
+    /*handleClick(creator) {
         return () => {
             console.log('Clicked', creator);
         }
         
-    }
+    }*/
 
     render() {
-        const { size, creators, children, onButtonClick} =this.props;
+        const { children } =this.props;
 
         const headerClass = classNames('header', {
-            'header--big': size === 'big',
-            'header--medium': size === 'medium',
-            'header--small': size === 'small',
+            
         });
 
         return (
-            <header className={headerClass}>
-                {creators && <h3>Creators: </h3>}
-                {creators && <ul>
-                    {creators.map((creator, idx) => <li key={idx}>
-                        <button onClick={this.handleClick(creator)}>{creator}</button>
-                    </li>)}
-                </ul>}
-
-                <div>
-                    {children}
-                </div>
-
-                <button onClick={onButtonClick}>Click me</button>
-
+            <header className=''>
+                <h3 className='row'>Blog page created on ReactJS</h3>
             </header>
         );
     }
