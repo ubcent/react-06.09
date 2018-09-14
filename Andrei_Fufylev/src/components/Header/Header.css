@@ -1,0 +1,14 @@
+.header {
+    background-color: rgb(60, 85, 131);
+}
+
+.header--big {
+    height: 500px;
+}
+
+.header--medium {
+    height: 300px;
+}
+.header--small {
+    height: 250px;
+}
