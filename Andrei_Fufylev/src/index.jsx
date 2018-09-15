@@ -7,6 +7,7 @@ import Header from 'components/Layout/MainPage/Header';
 import Login from 'components/Layout/MainPage/Login';
 import Menu from 'components/Layout/MainPage/Menu';
 import Articles from 'components/Layout/MainPage/Articles';
+import Footer from 'components/Layout/MainPage/Footer';
 
 class App extends Component {
 
@@ -17,7 +18,7 @@ class App extends Component {
                 
                     <div className="row">
                         <div className="col-12">
-                            <Header></Header>
+                            <Header />
                         </div>
 
                     </div>
@@ -32,7 +33,10 @@ class App extends Component {
                     </div>
                     <hr />
                     <div>
-                        <Articles ></Articles>
+                        <Articles />
+                    </div>
+                    <div>
+                        <Footer />
                     </div>
                 </div>
             </div>
