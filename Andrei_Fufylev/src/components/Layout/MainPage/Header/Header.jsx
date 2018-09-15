@@ -9,7 +9,7 @@ export default class Header extends Component {
     render() {
         return (
           <div>
-            <h1>My first Blog page <Badge color="secondary">Created with ReactJS</Badge></h1>
+            <h1>My first Blog page <Badge color='secondary'>Created with ReactJS</Badge></h1>
           </div>
         );
       }

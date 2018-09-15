@@ -12,11 +12,11 @@ export default class Footer extends Component {
                     © 2018 Brand All Rights Reserved
                 </div>
                 <nav className='nav col-6 justify-content-end'>
-                    <a href="#" className="nav-link text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" className="nav-link text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="#" className="nav-link text-white"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" className="nav-link text-white"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" className="nav-link text-white"><i class="fab fa-google-plus-g"></i></a>
+                    <a href='#' className='nav-link text-white'><i class='fab fa-facebook-f'></i></a>
+                    <a href='#' className='nav-link text-white'><i class='fab fa-twitter'></i></a>
+                    <a href='#' className='nav-link text-white'><i class='fab fa-linkedin-in'></i></a>
+                    <a href='#' className='nav-link text-white'><i class='fab fa-pinterest-p'></i></a>
+                    <a href='#' className='nav-link text-white'><i class='fab fa-google-plus-g'></i></a>
                 </nav>
             </div>
 

@@ -16,18 +16,18 @@ class App extends Component {
             <div className='wrapper'>
                 <div className='container'>
                 
-                    <div className="row">
-                        <div className="col-12">
+                    <div className='row'>
+                        <div className='col-12'>
                             <Header />
                         </div>
 
                     </div>
                     <hr />
-                    <div className="row">
-                        <div className="col-8">
+                    <div className='row'>
+                        <div className='col-8'>
                             <Menu />
                         </div>
-                        <div className="col-4 text-right">
+                        <div className='col-4 text-right'>
                             <Login buttonLabel='Login'></Login>
                         </div>
                     </div>

@@ -1,8 +1,6 @@
 import './Articles.css';
 
 import React, { Component } from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 const itemsArticles = [
     {
@@ -42,12 +40,12 @@ export default class Articles extends Component {
     render() {
         let items = itemsArticles.map((item, index) => {
             return (
-                <div className="col-4" key={index}>
-                    <div className="thumbnail">
-                        <div className="caption">
-                            <h3 className="text-white bg-secondary p-2">{item.title}</h3>
-                            <p className="text-justify text-secondary m-1">{item.text}</p>
-                            <p className="text-right text-black-50 m-3"><i>Автор: {item.author}</i></p>
+                <div className='col-4' key={index}>
+                    <div className='thumbnail'>
+                        <div className='caption'>
+                            <h3 className='text-white bg-secondary p-2'>{item.title}</h3>
+                            <p className='text-justify text-secondary m-1'>{item.text}</p>
+                            <p className='text-right text-black-50 m-3'><i>Автор: {item.author}</i></p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +53,7 @@ export default class Articles extends Component {
         });
 
         return (
-            <div className="row">
+            <div className='row'>
                 {this.props.children}
                     {items}
             </div>
