@@ -9,5 +9,5 @@ button.value = 'Нажми на меня';
 button.addEventListener('click', function() {
     const date = new Date();
     alert(date);
-})
+});
 document.body.appendChild(button);
