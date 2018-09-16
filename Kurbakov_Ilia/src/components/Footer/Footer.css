@@ -1,0 +1,17 @@
+footer {
+    flex: 0;
+    background-color: #4692ff;
+}
+
+.footer_menu li {
+    list-style-type: none;
+}
+
+.footer_menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_menu li a:hover {
+    color: red;
+}

@@ -19,24 +19,14 @@ export default class Header extends Component {
         }
     }
     render() {
-        const {size, creators,children} = this.props;
-        const headerClass = classNames('header', {
-            'header--big': size === 'big',
-            'header--medium': size === 'medium',
-            'header--small': size === 'small',
-        });
+        const {menu,children} = this.props;
+        const headerClass = classNames('header_menu');
         return (
             <header className={headerClass}>
-                {creators && <h1>Creators:</h1>}
-                {creators && <ul>
-                    {creators.map((creator,idx) => <li key={idx}>
-                        <button onClick={this.handleClick(creator)}>{creator}</button>
-                    </li>)}
-                </ul>}
-                <div>
-                    Here:
-                    {children}
-                </div>
+             <ul>
+                 {menu.map((element,idx) => <li key={idx}><a href='#'>{element}</a></li>)}
+             </ul>
+                <button>Login</button>
             </header>
         );
     }

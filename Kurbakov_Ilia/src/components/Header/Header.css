@@ -1,14 +1,26 @@
-.header{
-    background-color: aqua;
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4692ff;
+    padding-right: 30px;
+    padding-left: 30px;
 }
-.header--big{
-    height: 500px;
+.header_menu ul{
+    display: flex;
 }
-.header--medium{
-    height: 300px;
-
+.header_menu ul li{
+    list-style-type: none;
+    margin: 10px;
 }
-.header--small{
-    height: 150px;
-
+.header_menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.header_menu ul li a:hover{
+    color: red;
+}
+button:hover{
+    color: red;
+    cursor: pointer;
 }

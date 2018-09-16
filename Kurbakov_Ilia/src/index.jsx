@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
-
 import Header from 'components/Header';
+import Body from 'components/Body';
+import './index.css'
+import $ from 'jquery';
+import Popper from 'popper.js';
+import Footer from './components/Footer';
 
-const creators = ['Vasya Pupkin', 'Petya Ivanov', 'Ivan Sidorov'];
+
+const menu = ['Главная', 'Блог', 'Темы'];
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <Header size='big' creators={creators}>
-                    <div>Hello i Header</div>
+            <div className='container'>
+                <div class="flex">
+                <Header menu={menu}>
                 </Header>
-                Hello world
+                <Body/>
+                </div>
+                <Footer menu={menu}/>
             </div>
         );
     }
