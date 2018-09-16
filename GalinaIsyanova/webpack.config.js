@@ -4,15 +4,22 @@ const HtmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, 'src', 'index.js'),
+        main: path.resolve(__dirname, 'src', 'index.jsx'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-    }, module: {
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            components: path.resolve(__dirname, 'src', 'components'),
+        }
+    },
+    module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node-modules/,
                 use: {
                     loader: 'babel-loader',

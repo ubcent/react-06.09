@@ -1,0 +1,15 @@
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(235, 235, 235);
+    font-size: 15px;;
+    padding: 20px;
+    font-size: 20px;
+    height: auto;
+}
+
+.main:after{
+    content: '';
+    clear: both;
+    display: block;
+}
