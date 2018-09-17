@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+// stateful
 export default class Header extends Component {
   static propTypes = {
     creators: PropTypes.arrayOf(PropTypes.string).isRequired,
