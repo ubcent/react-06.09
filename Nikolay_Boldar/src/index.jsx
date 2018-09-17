@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 import Header from 'components/Header';
-import Grid from 'components/Grid';
+import 'semantic-ui-css/semantic.css';
 import GridLayout from 'components/Grid/Grid';
 
 class App extends Component {

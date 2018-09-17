@@ -26,6 +26,42 @@ module.exports = {
                 },
             },
             {
+                test: /\.png$/,
+                use: {
+                    loader: 'url-loader',
+                }
+            },
+            {
+                test: /\.jpg$/,
+                use: {
+                    loader: 'file-loader',
+                }
+            },
+            {
+                test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: 'url-loader',
+                }
+            },
+            {
+                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: 'url-loader',
+                }
+            },
+            {
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: 'url-loader',
+                }
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: 'url-loader',
+                }
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
