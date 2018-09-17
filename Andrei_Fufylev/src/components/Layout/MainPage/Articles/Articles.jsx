@@ -45,7 +45,7 @@ export default class Articles extends Component {
                         <div className='caption'>
                             <h3 className='text-white bg-secondary p-2'>{item.title}</h3>
                             <p className='text-justify text-secondary m-1'>{item.text}</p>
-                            <p className='text-right text-black-50 m-3'><i>Автор: {item.author}</i></p>
+                            <p className='text-right text-black-50 m-3'><i>Author: {item.author}</i></p>
                         </div>
                     </div>
                 </div>
