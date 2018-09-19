@@ -1,27 +1,30 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import className from 'classnames';
 
 import Header from 'components/Header';
+import Login from 'components/Login';
+import TopBar from 'components/TopBar';
+import Main from 'components/Main';
+import Footer from 'components/Footer';
 
-const creators = ['Vasya Pupkin', 'Petya Ivanov', 'Ivan Sidorov'];
-
-class App extends Component {
-    handleClick() {
-        console.log('button clicked');
-    }
+class Layout extends Component {
 
     render() {
+        const menu = ['Home', 'Articles', 'About us', 'Contacts'];
+        const LogoIcon = className('fab fa-react');
         return (
             <div>
-                <Header onButtonClick={this.handleClick} size="small" creators={creators}>
-                    <div>
-                        Hello I'm children of Header!
-                    </div>
-                </Header>
-                Hello world
+                <Login />
+                <TopBar menu={menu} LogoIcon={LogoIcon}/>
+                <Header LogoIcon={LogoIcon}/>
+                <Main/>
+                <Footer/>
             </div>
         );
     }
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(<Layout />, document.getElementById('root'));
