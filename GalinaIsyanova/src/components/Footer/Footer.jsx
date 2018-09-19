@@ -1,12 +1,10 @@
-import './Footer.css';
-
 import React, { Component } from 'react';
 import className from 'classnames';
 import PropTypes from 'prop-types';
 
 export default class Footer extends Component {
     static propTypes = {
-        footerContent: PropTypes.arrayOf(PropTypes.string),
+        footerContent: PropTypes.string,
     };
     static defaultProps = {
         footerContent: ['® All rights reserved']
@@ -14,11 +12,15 @@ export default class Footer extends Component {
 
     render() {
         const { footerContent } = this.props;
-        const footerClass = className('footer');
+        const footerClass = className('py-5 bg-dark');
+        const footerClassInside = className('container');
+        const textClassName = className('m-0 text-center text-white');
 
         return (
             <footer className={footerClass}>
-                <div>{footerContent.map((footerItem, ind) => <div key={ind}>{footerItem}</div>)}</div>
+                <div className={footerClassInside}>
+                    <p className={textClassName}>{footerContent}</p>
+                </div>
             </footer>
         );
     }
