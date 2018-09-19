@@ -39,6 +39,8 @@ module.exports = {
         new HtmlPlugin({
             template: path.resolve(__dirname,'src','index.html'),
             filename: "index.html"
-        })
+        }),
+
+
     ]
 };
