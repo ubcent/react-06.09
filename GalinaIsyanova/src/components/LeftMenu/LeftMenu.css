@@ -1,0 +1,17 @@
+.left-menu {
+    float: left;
+    width: 20%;
+}
+
+.left-menu li{
+    list-style-type: none;
+}
+
+.left-menu a{
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 255, 0.397);
+    padding: 10px;
+    text-align: center;
+}

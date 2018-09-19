@@ -1,0 +1,23 @@
+.header__menu {
+    background-color: rgba(0, 204, 255, 0.87);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header__menu li{
+    display: inline;
+}
+
+.header__menu a {
+    display: block;
+    padding: 20px;
+}
+
+.header__menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
