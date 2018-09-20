@@ -1,4 +1,3 @@
-import './SearchForm.css';
 import React, { Component } from 'react';
 import { Button, InputGroup, Card, Input, CardHeader, CardBody, InputGroupAddon } from 'reactstrap';
 
@@ -11,7 +10,7 @@ export default class SearchForm extends Component {
                     <CardBody>
                         <InputGroup>
                             <Input placeholder="Search for..." />
-                            <InputGroupAddon addonType="prepend">
+                            <InputGroupAddon addonType="append">
                                 <Button className="search_form__button">Go!</Button>
                             </InputGroupAddon>    
                         </InputGroup>
