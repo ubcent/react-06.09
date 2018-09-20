@@ -1,0 +1,25 @@
+.article_text {
+    text-align: justify;
+  }
+.article {
+  margin-bottom: 40px;
+  position: relative;
+}
+.article_title {
+  text-align: center;
+}
+.article_date {
+  margin-bottom: 8px;
+  color: snow;
+  display: block;
+}
+.article:after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 92%;
+  background-color: #d4b619;
+  position: relative;
+  bottom: -15px;
+  margin: 0 auto;
+}
