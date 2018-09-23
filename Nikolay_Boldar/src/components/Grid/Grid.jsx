@@ -2,45 +2,39 @@ import React from 'react';
 import {Grid} from 'semantic-ui-react';
 import IconCompany from 'components/Header/IconCompany';
 import Search from 'components/Header/Search';
-import ModalForm from 'components/ModalForm';
 import MenuBar from "components/MenuBar/";
+import AsideBlock from "components/AsideBlock";
+import ContentBlock from 'components/ContentBlock';
+import './Grid.css';
+
+const numberOfPosts = [0,1,2];
+const menuItems = ['home', 'about', 'services', 'contact'];
+const links = ['Web Design', 'HTML', 'Freebies', 'JavaScript', 'CSS', 'Tutorials'];
+const headers = ['Search', 'Categories', 'Side Widget'];
 
 
-const style={
-    header:{
-        display:'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        minHeight: 50,
-        padding: '1em 0em'
-    }
-};
 const GridLayout = () => (
 
-    <Grid celled>
+    <Grid celled className="grid-block">
         <Grid.Row  verticalAlign='middle'>
-            <Grid.Column width={16} style={style.header} verticalAlign='middle' >
-                <IconCompany/>
-                <Search/>
-                <ModalForm/>
+            <Grid.Column  flex flex-row width={16} className="header-block" verticalAlign='middle'>
+                <IconCompany />
+                <MenuBar className="menu-block" menuItems={menuItems}></MenuBar>
+
             </Grid.Column>
         </Grid.Row>
+
         <Grid.Row>
-            <Grid.Column width={16} style={{minHeight: 50, padding: '0em 0em'}}>
-                <MenuBar/>
+            <Grid.Column width={10} style={{minHeight: '100%', padding: '1em 1em'}}>
+                <ContentBlock numberOfPosts={numberOfPosts}/>
             </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-            <Grid.Column width={4} style={{minHeight: '100%', padding: '1em 1em'}}>
-                there is asidebar
-            </Grid.Column>
-            <Grid.Column width={12} style={{minHeight: '100%', padding: '1em 1em'}}>
-                Here will be content
+            <Grid.Column width={6} style={{minHeight: '100%', padding: '1em 1em'}}>
+                <AsideBlock links={links} headers={headers}></AsideBlock>
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
             <Grid.Column width={16}>
-                ... and this is footer
+                Copyright © Your Website 2018
             </Grid.Column>
         </Grid.Row>
     </Grid>

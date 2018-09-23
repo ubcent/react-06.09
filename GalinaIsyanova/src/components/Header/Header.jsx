@@ -1,21 +1,20 @@
-import './Header.css';
-
 import React, { Component } from 'react';
 import className from 'classnames';
 import Menu from 'components/Menu';
-import Login from 'components/Login';
 
 export default class Header extends Component {
     render() {
-        const { menu } = this.props;
-        const headerClass = className('header');
+        const headerClass = className('bg-dark');
+        const headerClassInside = className('container');
+        const myMenu = ['Home', 'About', 'Services', 'Contact'];
+        const myBrand = 'Start Bootstrap';
 
         return (
             <header className={headerClass}>
-                <div className="welcome">Welcome!</div>
-                <Menu menuArray={menu} />
-                <Login />
-            </header>
+                <div className={headerClassInside}> 
+                    <Menu brand={myBrand} menuArray={myMenu} />
+                </div>   
+            </header>    
         );
     }
 }

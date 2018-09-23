@@ -1,27 +1,23 @@
-import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import Header from 'components/Header';
 import Main from 'components/Main';
 import Footer from 'components/Footer';
+import ModalWelcome from 'components/ModalWelcome';
 
-class Layout extends Component {
-    handleClick() {
-        console.log('Button click');
-    }
-
+class App extends Component {
     render() {
-        const menu = ['Home', 'Blog', 'About', 'Help'];
-        const footer = ['® All rights reserved', '2018'];
-
+        const myFooterContent = 'Copyright © Your Website 2018';
         return (
             <div>
-                <Header menu={menu} />
+                <Header />
                 <Main />
-                <Footer footerContent={footer}/>
+                <Footer footerContent={myFooterContent}/>
+                <ModalWelcome />
             </div>
         );
     }
 }
 
-ReactDom.render(<Layout />, document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'));

@@ -1,20 +1,17 @@
-import './Main.css';
-
 import React, { Component } from 'react';
-import className from 'classnames';
-import LeftMenu from 'components/LeftMenu';
-import Articles from 'components/Articles';
+import RigthMenu from 'components/RigthMenu';
+import FormArticle from 'components/FormArticle';
+import { Container, Row, Col } from 'reactstrap';
 
 export default class Main extends Component {
     render() {
-        const mainClass = className('main');
-        const menu = ['Home', 'Blog', 'About', 'Help'];
-
         return (
-            <main className={mainClass}>
-                <LeftMenu menuArray={menu}/>
-                <Articles />
-            </main>
+            <Container>
+                <Row>
+                    <Col lg="8"><FormArticle /></Col>
+                    <Col lg="4"><RigthMenu /></Col>
+                </Row>
+            </Container>
         );
     }
 }
