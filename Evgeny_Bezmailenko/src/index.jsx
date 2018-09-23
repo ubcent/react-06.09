@@ -1,27 +1,38 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'holderjs/holder.min';
+import './style.css';
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import className from 'classnames';
 
+import Login from 'components/Login';
+import Subscribe from 'components/Subscribe';
 import Header from 'components/Header';
+import TopNav from 'components/TopNav';
+import Banner from 'components/Banner';
+import PreviewCategory from 'components/PreviewCategory';
+import Main from 'components/Main';
+import Footer from 'components/Footer';
 
-const creators = ['Vasya Pupkin', 'Petya Ivanov', 'Ivan Sidorov'];
-
-class App extends Component {
-    handleClick() {
-        console.log('button clicked');
-    }
+class Layout extends Component {
 
     render() {
+
+        const LogoIcon = className('fab fa-react');
         return (
-            <div>
-                <Header onButtonClick={this.handleClick} size="small" creators={creators}>
-                    <div>
-                        Hello I'm children of Header!
-                    </div>
-                </Header>
-                Hello world
+            <div className="container">
+                <Login />
+                <Subscribe />
+                <Header LogoIcon={LogoIcon}/>
+                <TopNav />
+                <Banner/>
+                <PreviewCategory/>
+                <Main/>
+                <Footer/>
             </div>
         );
     }
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(<Layout />, document.getElementById('root'));
