@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import ReactDom from 'react-dom';
 
 import Header from 'components/Header';
 import Counter from 'components/Counter';
 import CommentsForm from 'components/CommentsForm';
+import CommentsListContainer from 'containers/CommentsListContainer';
 
 const creators = ['Vasya Pupkin', 'Petya Ivanov', 'Ivan Sidorov'];
 
@@ -12,7 +13,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      comments: [],
+      isShown: true,
     }
   }
 
@@ -21,16 +22,12 @@ class App extends Component {
   }
 
   handleSend = (comment) => {
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        comments: prevState.comments.concat([comment]),
-      }
-    })
+    const { isShown } = this.state;
+    this.setState({ isShown: !isShown })
   };
 
   render() {
-    const { comments } = this.state;
+    const { isShown } = this.state;
     return (
       <div>
         <Header onButtonClick={this.handleClick} size="small" creators={creators}>
@@ -40,9 +37,7 @@ class App extends Component {
         </Header>
         Hello world
         <Counter />
-        <ul>
-          {comments.map((comment, idx) => <li key={idx}>{comment.username}: {comment.message}</li>)}
-        </ul>
+        <CommentsListContainer />
         <CommentsForm onSend={this.handleSend} />
       </div>
     );
