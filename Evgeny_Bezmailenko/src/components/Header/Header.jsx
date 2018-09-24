@@ -1,50 +1,29 @@
 import './Header.css';
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 export default class Header extends Component {
-    static propTypes = {
-        creators: PropTypes.arrayOf(PropTypes.string).isRequired,
-        size: PropTypes.oneOf(['small', 'medium', 'big']),
-        onButtonClick:  PropTypes.func,
-    };
-
-    static defaultProps = {
-        size: 'small',
-    };
-
-    handleClick(creator) {
-        return () => {
-            console.log('Clicked', creator);
-        }
-    }
-
     render() {
-        const { size, creators, children, onButtonClick } = this.props;
-        const headerClass = classNames('header', {
-            'header--big': size === 'big',
-            'header--medium': size === 'medium',
-            'header--small': size === 'small',
-        });
+        const {LogoIcon} = this.props;
+        const {SearchIcon} = 'fas fa-search';
 
         return (
-            <header className={headerClass}>
-                {creators && <h3>Creators:</h3>}
-                {creators && <ul>
-                    {creators.map((creator, idx) => <li key={idx}>
-                        <button onClick={this.handleClick(creator)}>{creator}</button>
-                    </li>)}
-                </ul>}
-
-                <div>
-                    Here:
-                    {children}
+            <header className="blog-header py-3">
+                <div className="row flex-nowrap justify-content-between align-items-center">
+                    <div className="col-4 pt-1">
+                        <a className="text-muted" data-toggle="modal" data-target="#subscribeModal" href="#subscribeModal">Subscribe</a>
+                    </div>
+                    <div className="col-4 text-center">
+                        <a className="blog-header-logo text-dark" href="#"><i className={LogoIcon} /> My REACT blog</a>
+                    </div>
+                    <div className="col-4 d-flex justify-content-end align-items-center">
+                        <a className="text-muted" href="#">
+                            <i className={SearchIcon} />
+                        </a>
+                        <a className="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target=".bd-example-modal-sm" href="#myModal">Sign up</a>
+                    </div>
                 </div>
-
-                <button onClick={onButtonClick}>Click me</button>
             </header>
         );
-    }
+      }
 }
