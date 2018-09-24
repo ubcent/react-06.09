@@ -1,0 +1,15 @@
+footer {
+    flex: 0;
+    background-color: #4692ff;
+}
+
+.footer_menu{
+    display: flex;
+    justify-content: center;
+}
+.footer_menu li a {
+    color: white;
+}
+.footer_menu li a:hover {
+    color: darkblue;
+}
