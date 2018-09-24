@@ -1,58 +1,61 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Article from 'components/Article';
 import Comments from 'components/Comments';
+import PropTypes from 'prop-types';
 
-export default class FormArticle extends Component {
-    render() {
-        const myTextWithClass = [
-            {
-                class: 'lead',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?'
-            }, {
-                class: '',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.'
-            }, {
-                class: '',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!'
-            }, {
-                class: '',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!'
-            }
-        ];
+export default function FormArticle(props) {
+    const { postTitle, author, datePublished, imageSrc, textWithClass, blockquote, textWithClassMore, comments } =
+        props;
 
-        const myBlockquote = {
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.',
-            footerText: 'Someone famous in ',
-            citeTitle: 'Source Title',
-            citeText: 'Source Title'
-        };
-
-        const myTextWithClass1 = [
-            {
-                class: '',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?'
-            }, {
-                class: '',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!'
-            }
-
-        ];
-
-        const myArticleInfo = {
-            postTitle: 'Post Title',
-            author: 'Start Bootstrap',
-            datePublished: 'January 1, 2018 at 12:00 PM',
-            imageSrc: 'http://placehold.it/900x300',
-            textWithClass: myTextWithClass,
-            blockquote: myBlockquote,
-            textWithClassMore: myTextWithClass1
-        };
-
-        return (
-            <div>
-                <Article articleInfo = {myArticleInfo}/>
-                <Comments />
-            </div>
-        );
-    }
+    return (
+        <div>
+            <Article postTitle={postTitle} author={author} datePublished={datePublished} imageSrc={imageSrc}
+                textWithClass={textWithClass} blockquote={blockquote} textWithClassMore={textWithClassMore} />
+            <Comments comments={comments} />
+        </div>
+    );
 }
+
+FormArticle.propTypes = {
+    postTitle: PropTypes.string,
+    datePublished: PropTypes.string,
+    author: PropTypes.shape({
+        name: PropTypes.string,
+        pageRef: PropTypes.string,
+    }),
+    imageSrc: PropTypes.string,
+    textWithClass: PropTypes.arrayOf(PropTypes.shape({
+        class: PropTypes.string,
+        text: PropTypes.string
+    })),
+    blockquote: PropTypes.shape({
+        text: PropTypes.string,
+        footerText: PropTypes.string,
+        citeTitle: PropTypes.string,
+        citeText: PropTypes.string,
+    }),
+    textWithClassMore: PropTypes.arrayOf(PropTypes.shape({
+        class: PropTypes.string,
+        text: PropTypes.string
+    })),
+    comments: PropTypes.arrayOf(PropTypes.shape({
+        userImageSrc: PropTypes.string,
+        userName: PropTypes.string,
+        commentText: PropTypes.string,
+        answerToComments: PropTypes.arrayOf(PropTypes.shape({
+            userImageSrc: PropTypes.string,
+            userName: PropTypes.string,
+            commentText: PropTypes.string
+        })),
+    })),
+};
+FormArticle.defaultProps = {
+    postTitle: '',
+    datePublished: '',
+    author: {},
+    imageSrc: '',
+    textWithClass: [],
+    blockquote: {},
+    textWithClassMore: [],
+    comments: [],
+};
