@@ -16,8 +16,6 @@ export default function OneUserPage(props) {
         'hide': posts.length == 0,
     });
 
-    console.log(posts);
-
     return (
         <div>
             <h1 className="mt-4">{name}</h1>
