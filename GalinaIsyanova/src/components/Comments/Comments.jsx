@@ -35,6 +35,16 @@ class Comments extends PureComponent {
                 commentText: document.getElementById('commentText').value,
                 answerToComments: [],
             };
+
+            fetch(`http://localhost:3000/postsInfoArray/${this.props.match.params.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ comments: prevState.comments.concat([myComment]) }),
+            });
+
             return {
                 ...prevState,
                 comments: prevState.comments.concat([myComment])
@@ -66,29 +76,6 @@ class Comments extends PureComponent {
                     body: JSON.stringify(newComment),
                 });
 
-                console.log(newComment);
-            });
-
-
-        fetch(`http://localhost:3000/postsInfoArray/${this.props.match.params.id}`)
-            .then((response) => response.json())
-            .then((onePost) => {
-                const newComment = {
-                    userImageSrc: 'http://placehold.it/50x50',
-                    userName: 'Commenter Name',
-                    commentText: document.getElementById('commentText').value,
-                    answerToComments: []
-                }
-                const newElement = onePost.comments.concat([newComment]);
-
-                fetch(`http://localhost:3000/postsInfoArray/${this.props.match.params.id}`, {
-                    method: 'PATCH',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ comments: newElement }),
-                });
             });
     }
 
