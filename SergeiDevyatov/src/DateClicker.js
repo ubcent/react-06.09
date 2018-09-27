@@ -15,9 +15,4 @@ export class DateClicker {
 
     }
 
-    onClickFunction() {
-        const dateNow = new Date();
-        this.nestedDiv.innerHTML = `<p>${dateNow.getFullYear()}-${dateNow.getMonth()}-${dateNow.getDate()}</p>`;
-
-    }
 }
