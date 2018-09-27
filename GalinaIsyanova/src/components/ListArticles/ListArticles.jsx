@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import BlogPost from 'components/BlogPost';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export default class ListArticles extends PureComponent {
     static propTypes = {
@@ -59,24 +60,18 @@ export default class ListArticles extends PureComponent {
             infoForPrint.stateLeftButton = 0;
         }
 
-        let i;
-        for (i = page * this.countPostInPage; i < (page + 1) * this.countPostInPage; i++) {
-            if (i >= postsInfoArray.length) {
-                infoForPrint.stateRightButton = 0;
-                return infoForPrint;
-            }
-
-            infoForPrint.arrayForPrint.push(postsInfoArray[i]);
-        }
-
-        if (i == postsInfoArray.length) {
+        if ((page + 1) * this.countPostInPage >= postsInfoArray.length) {
             infoForPrint.stateRightButton = 0;
         }
+
+        infoForPrint.arrayForPrint = postsInfoArray.slice(page * this.countPostInPage, 
+            (page + 1) * this.countPostInPage);
 
         return infoForPrint;
     }
 
     handleClickRef = (event) => {
+        event.preventDefault();
         const addition = event.target.name === 'left' ? -1 : 1;
 
         this.setState((prevState) => {
@@ -93,12 +88,32 @@ export default class ListArticles extends PureComponent {
         });
     }
 
+    componentWillReceiveProps(newProps) {
+        this.setState((prevState) => {
+            const { postsInfoArray } = newProps;
+            const pageForPrint = 0;
+            const infoForPrint = this.findPostsForPrint(pageForPrint, postsInfoArray);
+
+            return {
+                ...prevState,
+                page: pageForPrint,
+                postsInfoForPrint: infoForPrint.arrayForPrint,
+                stateLeftButton: infoForPrint.stateLeftButton,
+                stateRightButton: infoForPrint.stateRightButton,
+            }
+        });
+    }
+
     render() {
         const { titleList, smallTitleList, paginationButtonName } = this.props;
         const { postsInfoForPrint, stateLeftButton, stateRightButton } = this.state;
 
-        const classLeftButton = (stateLeftButton) ? 'page-item' : 'page-item disabled';
-        const classRigthButton = (stateRightButton) ? 'page-item' : 'page-item disabled';
+        const classLeftButton = classNames('page-item', {
+            'disabled': stateLeftButton == 0,
+        });
+        const classRigthButton = classNames('page-item', {
+            'disabled': stateRightButton == 0,
+        });
 
         return (
             <div>

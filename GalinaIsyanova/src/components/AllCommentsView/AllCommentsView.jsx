@@ -35,7 +35,7 @@ export default class AllCommentsView extends PureComponent {
 
         const { allCommentsArray } = this.props;
         const pageForPrint = 0;
-        this.countPostInPage = 7;
+        this.countPostInPage = 6;
         const infoForPrint = this.findPostsForPrint(pageForPrint, allCommentsArray);
 
         this.state = {
@@ -57,24 +57,18 @@ export default class AllCommentsView extends PureComponent {
             infoForPrint.stateLeftButton = 0;
         }
 
-        let i;
-        for (i = page * this.countPostInPage; i < (page + 1) * this.countPostInPage; i++) {
-            if (i >= postsInfoArray.length) {
-                infoForPrint.stateRightButton = 0;
-                return infoForPrint;
-            }
-
-            infoForPrint.arrayForPrint.push(postsInfoArray[i]);
-        }
-
-        if (i == postsInfoArray.length) {
+        if ((page + 1) * this.countPostInPage >= postsInfoArray.length) {
             infoForPrint.stateRightButton = 0;
         }
+
+        infoForPrint.arrayForPrint = postsInfoArray.slice(page * this.countPostInPage, 
+            (page + 1) * this.countPostInPage);
 
         return infoForPrint;
     }
 
     handleClickRef = (event) => {
+        event.preventDefault();
         const addition = event.target.name === 'left' ? -1 : 1;
 
         this.setState((prevState) => {
@@ -84,6 +78,22 @@ export default class AllCommentsView extends PureComponent {
             return {
                 ...prevState,
                 page: prevState.page + addition,
+                postsInfoForPrint: infoForPrint.arrayForPrint,
+                stateLeftButton: infoForPrint.stateLeftButton,
+                stateRightButton: infoForPrint.stateRightButton,
+            }
+        });
+    }
+
+    componentWillReceiveProps(newProps) {
+        this.setState((prevState) => {
+            const { allCommentsArray } = newProps;
+            const pageForPrinf = 0;
+            const infoForPrint = this.findPostsForPrint(pageForPrinf, allCommentsArray);
+
+            return {
+                ...prevState,
+                page: pageForPrinf,
                 postsInfoForPrint: infoForPrint.arrayForPrint,
                 stateLeftButton: infoForPrint.stateLeftButton,
                 stateRightButton: infoForPrint.stateRightButton,

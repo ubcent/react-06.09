@@ -1,19 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import PropTypes from 'prop-types';
 
 export default class ModalWelcome extends PureComponent {
-    static propTypes = {
-        title: PropTypes.string, 
-        info: PropTypes.string, 
-        textButton: PropTypes.string,
-    };
-    static defaultProps = {
-        title: '', 
-        info: '', 
-        textButton: '',
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -31,7 +19,9 @@ export default class ModalWelcome extends PureComponent {
     }
 
     render() {
-        const { title, info, textButton } = this.props;
+        const info = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+        const title = 'Welcome!';
+        const textButton = 'Read blog';
 
         return (
             <div>
