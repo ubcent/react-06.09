@@ -1,17 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardHeader, CardBody } from 'reactstrap';
+import PropTypes from 'prop-types';
 
-export default class SideWidget extends Component {
-    render() {
-        const { widgetContent } = this.props;
+export default function SideWidget(props) {
+    const { widgetContent } = props;
 
-        return (
-            <div>
-                <Card className="my-4">
-                    <CardHeader tag="h5">Side Widget</CardHeader>
-                    <CardBody>{widgetContent}</CardBody>
-                </Card>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <Card className="my-4">
+                <CardHeader tag="h5">Side Widget</CardHeader>
+                <CardBody>{widgetContent}</CardBody>
+            </Card>
+        </div>
+    );
+}
+
+SideWidget.propTypes = {
+    widgetContent: PropTypes.string,
+};
+
+SideWidget.defaultProps = {
+    widgetContent: '',
 }
