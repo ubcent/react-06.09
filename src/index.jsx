@@ -1,10 +1,14 @@
 import React, { Component, PureComponent } from 'react';
 import ReactDom from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from 'components/Header';
+import Menu from 'components/Menu';
 import Counter from 'components/Counter';
 import CommentsForm from 'components/CommentsForm';
 import CommentsListContainer from 'containers/CommentsListContainer';
+
+import routes from './routes';
 
 const creators = ['Vasya Pupkin', 'Petya Ivanov', 'Ivan Sidorov'];
 
@@ -34,14 +38,20 @@ class App extends Component {
           <div>
             Hello I'm children of Header!
           </div>
+          <Menu items={[
+            { href: '/', title: 'Home' },
+            { href: '/comments', title: 'Comment' },
+          ]} />
         </Header>
-        Hello world
-        <Counter />
-        <CommentsListContainer />
-        <CommentsForm onSend={this.handleSend} />
+        <Switch>
+          {routes.map((route, idx) => <Route key={idx} {...route} />)}
+        </Switch>
       </div>
     );
   }
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(
+  <BrowserRouter><App /></BrowserRouter>, 
+  document.getElementById('root')
+);

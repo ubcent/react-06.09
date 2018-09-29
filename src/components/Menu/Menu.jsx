@@ -1,12 +1,14 @@
 import './Menu.css';
 
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-// Stateless
-export function(props) {
+function Menu(props) {
   return (
     <ul>
-      {props.items.map((item, idx) => <li key={idx}><a href={item.href}>{item.title}</a></li>)}
+      {props.items.map((item, idx) => <li key={idx}><Link to={item.href}>{item.title}</Link></li>)}
     </ul>
   );
 }
+
+export default withRouter(Menu);
