@@ -1,0 +1,14 @@
+header {
+    width: 100%;
+    min-height: 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    background-color: #1d1d1d;
+    text-align: left;
+    color: #d4b619;
+  }
+  .header_content {
+    width: 800px;
+    padding-left: 145px;
+    box-sizing: border-box;
+  }
