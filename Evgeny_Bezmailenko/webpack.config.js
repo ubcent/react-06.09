@@ -14,6 +14,7 @@ module.exports = {
         extensions: ['.js', '.jsx'],
         alias: {
             components: path.resolve(__dirname, 'src', 'components'),
+            containers: path.resolve(__dirname, 'src', 'containers'),
         },
     },
     module: {
@@ -34,6 +35,9 @@ module.exports = {
             },
         ]
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     plugins: [
         new ExtractTextPlugin({filename: 'styles.css'}),
         new HtmlPlugin({
@@ -41,4 +45,4 @@ module.exports = {
             filename: 'index.html',
         })
     ]
-}
+};

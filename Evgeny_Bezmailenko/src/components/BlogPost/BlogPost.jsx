@@ -1,19 +1,21 @@
-import './Main.css';
+import './BlogPost.css';
 
 import React, { Component } from 'react';
 
-
+import SingleArticleContainer from 'containers/SingleArticleContainer';
 import Aside from 'components/Aside';
-import PostsContainer from 'containers/PostsContainer';
 
+export default class BlogPost extends Component {
+    constructor() {
+        super();
+    }
 
-export default class Main extends Component {
     render() {
         return (
             <main role="main" className="container">
                 <div className="row">
-                    <PostsContainer/>
-                    <Aside/>
+                <SingleArticleContainer/>
+                <Aside/>
                 </div>
             </main>
         );

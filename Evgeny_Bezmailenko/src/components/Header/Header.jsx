@@ -14,7 +14,7 @@ export default class Header extends Component {
                         <a className="text-muted" data-toggle="modal" data-target="#subscribeModal" href="#subscribeModal">Subscribe</a>
                     </div>
                     <div className="col-4 text-center">
-                        <a className="blog-header-logo text-dark" href="#"><i className={LogoIcon} /> My REACT blog</a>
+                        <a className="blog-header-logo text-dark text-nowrap" href="#"><i className={LogoIcon} />REACT blog-system</a>
                     </div>
                     <div className="col-4 d-flex justify-content-end align-items-center">
                         <a className="text-muted" href="#">
