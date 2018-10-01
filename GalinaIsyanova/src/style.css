@@ -1,0 +1,16 @@
+#root, html, body, #root > div {
+    height: 100%;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+#root > div {
+    display: flex;
+    flex-direction: column;
+}
