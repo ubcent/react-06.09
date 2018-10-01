@@ -63,7 +63,7 @@ typings/
 /dist
 
 #gitignore folders
-idea
+.idea
 node_modules
 Andrei_Fufylev
 ViktorIlyin

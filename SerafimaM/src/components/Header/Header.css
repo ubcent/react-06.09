@@ -1,0 +1,40 @@
+header{
+    background-color: grey;
+    height: 150px;
+
+}
+
+.headerClass {
+
+    display: flex;
+
+    /* задано чтобы центрировать */
+    margin: 0 auto;
+    /* задано чтобы центрировать */
+
+}
+
+.header-big li a {
+    font-size: 26px;
+
+
+}
+
+.header-small li a {
+    font-size: 16px;
+}
+h3 {
+    font-size: 36px;
+    font-style: italic;
+    font-family: "Comic Sans MS";
+    margin-left: 20px;
+}
+.btn {
+
+      cursor: pointer;
+    font-size: 16px;
+   
+    color: darkgrey;
+    border-radius: 10px;
+    margin-top: 45px;
+}
