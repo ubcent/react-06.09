@@ -5,12 +5,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title1",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/1",
+      "fullPageRef": "/blog/1",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User1",
-        "pageRef": "users/1"
+        "pageRef": "/users/1"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -78,6 +78,12 @@
           "userName": "Commenter Name",
           "commentText": "Hi",
           "answerToComments": []
+        },
+        {
+          "userImageSrc": "http://placehold.it/50x50",
+          "userName": "Commenter Name",
+          "commentText": "123",
+          "answerToComments": []
         }
       ]
     },
@@ -86,12 +92,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title2",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/2",
+      "fullPageRef": "/blog/2",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User2",
-        "pageRef": "users/2"
+        "pageRef": "/users/2"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -167,12 +173,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title3",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/3",
+      "fullPageRef": "/blog/3",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User3",
-        "pageRef": "users/3"
+        "pageRef": "/users/3"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -242,12 +248,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title4",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/4",
+      "fullPageRef": "/blog/4",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User1",
-        "pageRef": "users/1"
+        "pageRef": "/users/1"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -317,12 +323,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title5",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/5",
+      "fullPageRef": "/blog/5",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User2",
-        "pageRef": "users/2"
+        "pageRef": "/users/2"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -392,12 +398,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title6",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/6",
+      "fullPageRef": "/blog/6",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User3",
-        "pageRef": "users/3"
+        "pageRef": "/users/3"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -465,6 +471,12 @@
           "userName": "Commenter Name",
           "commentText": ", ? /. .? ? ?",
           "answerToComments": []
+        },
+        {
+          "userImageSrc": "http://placehold.it/50x50",
+          "userName": "Commenter Name",
+          "commentText": "Galina",
+          "answerToComments": []
         }
       ]
     },
@@ -473,12 +485,12 @@
       "imgSrcShort": "http://placehold.it/750x300",
       "postTitle": "Post Title7",
       "postTextShort": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
-      "fullPageRef": "blog/7",
+      "fullPageRef": "/blog/7",
       "datePublishedShort": "January 1, 2017",
       "datePublished": "January 1, 2018 at 12:00 PM",
       "author": {
         "name": "User1",
-        "pageRef": "users/1"
+        "pageRef": "/users/1"
       },
       "imageSrc": "http://placehold.it/900x300",
       "textWithClass": [
@@ -565,19 +577,19 @@
       "posts": [
         {
           "title": "PostTitle1",
-          "href": "blog/1"
+          "href": "/blog/1"
         },
         {
           "title": "PostTitle4",
-          "href": "blog/4"
+          "href": "/blog/4"
         },
         {
           "title": "PostTitle7",
-          "href": "blog/7"
+          "href": "/blog/7"
         }
       ],
       "name": "User1",
-      "pageRef": "users/1"
+      "pageRef": "/users/1"
     },
     {
       "id": 2,
@@ -587,15 +599,15 @@
       "posts": [
         {
           "title": "PostTitle2",
-          "href": "blog/2"
+          "href": "/blog/2"
         },
         {
           "title": "PostTitle5",
-          "href": "blog/5"
+          "href": "/blog/5"
         }
       ],
       "name": "User2",
-      "pageRef": "users/2"
+      "pageRef": "/users/2"
     },
     {
       "id": 3,
@@ -605,15 +617,15 @@
       "posts": [
         {
           "title": "PostTitle3",
-          "href": "blog/3"
+          "href": "/blog/3"
         },
         {
           "title": "PostTitle6",
-          "href": "blog/6"
+          "href": "/blog/6"
         }
       ],
       "name": "User3",
-      "pageRef": "users/3"
+      "pageRef": "/users/3"
     },
     {
       "id": 4,
@@ -622,7 +634,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User4",
-      "pageRef": "users/4"
+      "pageRef": "/users/4"
     },
     {
       "id": 5,
@@ -631,7 +643,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User5",
-      "pageRef": "users/5"
+      "pageRef": "/users/5"
     },
     {
       "id": 6,
@@ -640,7 +652,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User6",
-      "pageRef": "users/6"
+      "pageRef": "/users/6"
     },
     {
       "id": 7,
@@ -649,7 +661,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User7",
-      "pageRef": "users/7"
+      "pageRef": "/users/7"
     },
     {
       "id": 8,
@@ -658,7 +670,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User8",
-      "pageRef": "users/8"
+      "pageRef": "/users/8"
     },
     {
       "id": 9,
@@ -667,7 +679,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User9",
-      "pageRef": "users/9"
+      "pageRef": "/users/9"
     },
     {
       "id": 10,
@@ -676,7 +688,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User10",
-      "pageRef": "users/10"
+      "pageRef": "/users/10"
     },
     {
       "id": 11,
@@ -685,7 +697,7 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User11",
-      "pageRef": "users/11"
+      "pageRef": "/users/11"
     },
     {
       "id": 12,
@@ -694,14 +706,14 @@
       "dateRegistration": "January 1, 2018 at 12:00 PM",
       "posts": [],
       "name": "User12",
-      "pageRef": "users/12"
+      "pageRef": "/users/12"
     }
   ],
   "comments": [
     {
       "id": 1,
       "postTitle": "Post Title1",
-      "fullPageRef": "blog/1",
+      "fullPageRef": "/blog/1",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -709,7 +721,7 @@
     {
       "id": 2,
       "postTitle": "Post Title1",
-      "fullPageRef": "blog/1",
+      "fullPageRef": "/blog/1",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -717,7 +729,7 @@
     {
       "id": 3,
       "postTitle": "Post Title1",
-      "fullPageRef": "blog/1",
+      "fullPageRef": "/blog/1",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -725,7 +737,7 @@
     {
       "id": 4,
       "postTitle": "Post Title1",
-      "fullPageRef": "blog/1",
+      "fullPageRef": "/blog/1",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -733,7 +745,7 @@
     {
       "id": 5,
       "postTitle": "Post Title2",
-      "fullPageRef": "blog/2",
+      "fullPageRef": "/blog/2",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -741,7 +753,7 @@
     {
       "id": 6,
       "postTitle": "Post Title2",
-      "fullPageRef": "blog/2",
+      "fullPageRef": "/blog/2",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -749,7 +761,7 @@
     {
       "id": 7,
       "postTitle": "Post Title2",
-      "fullPageRef": "blog/2",
+      "fullPageRef": "/blog/2",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -757,7 +769,7 @@
     {
       "id": 8,
       "postTitle": "Post Title2",
-      "fullPageRef": "blog/2",
+      "fullPageRef": "/blog/2",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -765,7 +777,7 @@
     {
       "id": 9,
       "postTitle": "Post Title3",
-      "fullPageRef": "blog/3",
+      "fullPageRef": "/blog/3",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -773,7 +785,7 @@
     {
       "id": 10,
       "postTitle": "Post Title3",
-      "fullPageRef": "blog/3",
+      "fullPageRef": "/blog/3",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -781,7 +793,7 @@
     {
       "id": 11,
       "postTitle": "Post Title3",
-      "fullPageRef": "blog/3",
+      "fullPageRef": "/blog/3",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -789,7 +801,7 @@
     {
       "id": 12,
       "postTitle": "Post Title3",
-      "fullPageRef": "blog/3",
+      "fullPageRef": "/blog/3",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -797,7 +809,7 @@
     {
       "id": 13,
       "postTitle": "Post Title4",
-      "fullPageRef": "blog/4",
+      "fullPageRef": "/blog/4",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -805,7 +817,7 @@
     {
       "id": 14,
       "postTitle": "Post Title4",
-      "fullPageRef": "blog/4",
+      "fullPageRef": "/blog/4",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -813,7 +825,7 @@
     {
       "id": 15,
       "postTitle": "Post Title4",
-      "fullPageRef": "blog/4",
+      "fullPageRef": "/blog/4",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -821,7 +833,7 @@
     {
       "id": 16,
       "postTitle": "Post Title4",
-      "fullPageRef": "blog/4",
+      "fullPageRef": "/blog/4",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -829,7 +841,7 @@
     {
       "id": 17,
       "postTitle": "Post Title5",
-      "fullPageRef": "blog/5",
+      "fullPageRef": "/blog/5",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -837,7 +849,7 @@
     {
       "id": 18,
       "postTitle": "Post Title5",
-      "fullPageRef": "blog/5",
+      "fullPageRef": "/blog/5",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -845,7 +857,7 @@
     {
       "id": 19,
       "postTitle": "Post Title5",
-      "fullPageRef": "blog/5",
+      "fullPageRef": "/blog/5",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -853,7 +865,7 @@
     {
       "id": 20,
       "postTitle": "Post Title5",
-      "fullPageRef": "blog/5",
+      "fullPageRef": "/blog/5",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -861,7 +873,7 @@
     {
       "id": 21,
       "postTitle": "Post Title6",
-      "fullPageRef": "blog/6",
+      "fullPageRef": "/blog/6",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -869,7 +881,7 @@
     {
       "id": 22,
       "postTitle": "Post Title6",
-      "fullPageRef": "blog/6",
+      "fullPageRef": "/blog/6",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -877,7 +889,7 @@
     {
       "id": 23,
       "postTitle": "Post Title6",
-      "fullPageRef": "blog/6",
+      "fullPageRef": "/blog/6",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -885,7 +897,7 @@
     {
       "id": 24,
       "postTitle": "Post Title6",
-      "fullPageRef": "blog/6",
+      "fullPageRef": "/blog/6",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -893,7 +905,7 @@
     {
       "id": 25,
       "postTitle": "Post Title7",
-      "fullPageRef": "blog/7",
+      "fullPageRef": "/blog/7",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -901,7 +913,7 @@
     {
       "id": 26,
       "postTitle": "Post Title7",
-      "fullPageRef": "blog/7",
+      "fullPageRef": "/blog/7",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -909,7 +921,7 @@
     {
       "id": 27,
       "postTitle": "Post Title7",
-      "fullPageRef": "blog/7",
+      "fullPageRef": "/blog/7",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -917,7 +929,7 @@
     {
       "id": 28,
       "postTitle": "Post Title7",
-      "fullPageRef": "blog/7",
+      "fullPageRef": "/blog/7",
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -965,6 +977,24 @@
       "userImageSrc": "http://placehold.it/50x50",
       "userName": "Commenter Name",
       "commentText": "New Comment",
+      "answerToComments": []
+    },
+    {
+      "id": 34,
+      "postTitle": "Post Title6",
+      "fullPageRef": "/blog/6",
+      "userImageSrc": "http://placehold.it/50x50",
+      "userName": "Commenter Name",
+      "commentText": "Galina",
+      "answerToComments": []
+    },
+    {
+      "id": 35,
+      "postTitle": "Post Title1",
+      "fullPageRef": "/blog/1",
+      "userImageSrc": "http://placehold.it/50x50",
+      "userName": "Commenter Name",
+      "commentText": "123",
       "answerToComments": []
     }
   ]

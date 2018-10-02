@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Article(props) {
     const { postTitle, author, datePublished, imageSrc, textWithClass, blockquote, textWithClassMore } = props;
-
+    if (author.pageRef == undefined) {
+        author.pageRef = '#'
+    } 
     return (
         <div>
             <h1 className="mt-4">{postTitle}</h1>
             <p className="lead">
                 by&nbsp;
-                    <a href={author.pageRef}>{author.name}</a>
+                <Link to={author.pageRef}>{author.name}</Link>
             </p>
             <hr></hr>
             <p>Posted on {datePublished}</p>
@@ -32,6 +35,7 @@ export default function Article(props) {
             <hr></hr>
         </div>
     );
+
 }
 
 Article.propTypes = {

@@ -9,6 +9,8 @@ import { Container, Row, Col } from 'reactstrap';
 import RigthMenu from 'components/RigthMenu';
 import routes from './routes.js';
 import ModalWelcome from 'components/ModalWelcome';
+import { Provider } from 'react-redux';
+import store from './store';
 
 function App() {
     const myFooterContent = 'Copyright © Your Website 2018';
@@ -41,7 +43,7 @@ function App() {
                 <Row>
                     <Col lg="8">
                         <Switch>
-                            {routes.map((route, idx) => <Route key={idx} {...route}/>)}
+                            {routes.map((route, idx) => <Route key={idx} {...route} />)}
                         </Switch>
                     </Col>
                     <Col lg="4"><RigthMenu leftContentCategoryForm={leftContentCategoryForm} rightContentCategoryForm={rightContentCategoryForm} contentSideWidget={contentSideWidget} /></Col>
@@ -49,13 +51,13 @@ function App() {
             </Container>
             <Footer footerContent={myFooterContent} />
             <Switch>
-                <Route path='/' component={ModalWelcome} exact/>
+                <Route path='/' component={ModalWelcome} exact />
             </Switch>
         </div>
     );
 }
 
 ReactDom.render(
-    <BrowserRouter><App /></BrowserRouter>,
+    <Provider store={store}><BrowserRouter><App /></BrowserRouter></Provider>,
     document.getElementById('root')
 );

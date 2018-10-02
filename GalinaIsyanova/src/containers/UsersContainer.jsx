@@ -1,24 +1,12 @@
 import React, { PureComponent } from 'react';
 import AllUsersView from 'components/AllUsersView';
+import { connect } from 'react-redux';
+import { load } from 'actions/users';
 
-export default class UsersContainer extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            users: [],
-        };
-    }
-
+class UsersContainer extends PureComponent {
     componentDidMount() {
-        fetch('http://localhost:3000/users')
-            .then((response) => response.json())
-            .then((users) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    users: prevState.users.concat(users),
-                }))
-            });
+        const { load } = this.props;
+        load();
     }
 
     render() {
@@ -28,7 +16,7 @@ export default class UsersContainer extends PureComponent {
             left: 'Older',
             right: 'Newer'
         }
-        const { users } = this.state;
+        const { users } = this.props;
 
         return (
             <AllUsersView titleUsers={titleUsers} smallTitleUsers={smallTitleUsers} 
@@ -37,3 +25,18 @@ export default class UsersContainer extends PureComponent {
     }
 }
 
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        users: state.users.entities,
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);

@@ -2,6 +2,7 @@ import './OneUserPage.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 export default function OneUserPage(props) {
     const { name, dateRegistration, imageSrcFull, posts } = props;
@@ -28,7 +29,7 @@ export default function OneUserPage(props) {
             <div className={classListPost}>This user has published this posts:
                 <div className="flex mt-4">
                     {posts.map((post, idx) => 
-                        <a key={idx} href={post.href} className="btn btn-primary">{post.title}</a>
+                        <Link key={idx} to={post.href} className="btn btn-primary">{post.title}</Link>
                     )}
                 </div>
             </div>

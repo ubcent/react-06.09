@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Media } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default function OneComment(props) {
     const { userImageSrc, userName, commentText, postTitle, fullPageRef } = props;
@@ -15,7 +16,7 @@ export default function OneComment(props) {
                 {commentText}
             </Media>
             <div className="card mb-4">
-                <a href={fullPageRef} className="btn btn-primary"><p>Read Post  to</p> {postTitle} &rarr;</a>
+                <Link to={fullPageRef} className="btn btn-primary"><p>Read Post  to</p> {postTitle} &rarr;</Link>
             </div>
         </Media>
     );

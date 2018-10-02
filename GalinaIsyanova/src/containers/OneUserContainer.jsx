@@ -1,32 +1,16 @@
 import React, { PureComponent } from 'react';
 import OneUserPage from 'components/OneUserPage';
+import { connect } from 'react-redux';
+import { load } from 'actions/users';
 
-export default class OneUserContainer extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            user: {
-                posts: [],
-            },
-        };
-    }
-
+class OneUserContainer extends PureComponent {
     componentDidMount() {
-        const { match } = this.props;
-
-        fetch(`http://localhost:3000/users/${match.params.id}`)
-            .then((response) => response.json())
-            .then((user) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    user,
-                }))
-            });
+        const { load } = this.props;
+        load();
     }
 
     render() {
-        const { user } = this.state;
+        const { user } = this.props;
 
         return (
             <OneUserPage {...user} />
@@ -34,3 +18,18 @@ export default class OneUserContainer extends PureComponent {
     }
 }
 
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        user: state.users.entities.find((user) => +user.id === +props.match.params.id),
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OneUserContainer);

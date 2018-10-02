@@ -1,24 +1,12 @@
 import React, { PureComponent } from 'react';
 import AllCommentsView from 'components/AllCommentsView';
+import { connect } from 'react-redux';
+import { load } from 'actions/comments';
 
-export default class UsersContainer extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            comments: [],
-        };
-    }
-
+class CommentsContainer extends PureComponent {
     componentDidMount() {
-        fetch('http://localhost:3000/comments')
-            .then((response) => response.json())
-            .then((comments) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    comments: prevState.comments.concat(comments),
-                }))
-            });
+        const { load } = this.props;
+        load();
     }
 
     render() {
@@ -28,12 +16,28 @@ export default class UsersContainer extends PureComponent {
             left: 'Older',
             right: 'Newer'
         }
-        const { comments } = this.state;
+        const { comments } = this.props;
 
         return (
-            <AllCommentsView titleComments={titleComments} smallTitleComments={smallTitleComments} 
-            paginationButtonName={paginationButtonName} allCommentsArray={comments} />
+            <AllCommentsView titleComments={titleComments} smallTitleComments={smallTitleComments}
+                paginationButtonName={paginationButtonName} allCommentsArray={comments} />
         );
     }
 }
+
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        comments: state.comments.entities,
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsContainer);
 

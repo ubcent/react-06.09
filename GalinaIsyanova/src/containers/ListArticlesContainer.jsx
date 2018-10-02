@@ -1,24 +1,12 @@
 import React, { PureComponent } from 'react';
 import ListArticles from 'components/ListArticles';
+import { connect } from 'react-redux';
+import { load } from 'actions/posts';
 
-export default class ListArticlesContainer extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            posts: [],
-        };
-    }
-
+class ListArticlesContainer extends PureComponent {
     componentDidMount() {
-        fetch('http://localhost:3000/postsInfoArray')
-            .then((response) => response.json())
-            .then((posts) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    posts: prevState.posts.concat(posts),
-                }))
-            });
+        const { load } = this.props;
+        load();
     }
 
     render() {
@@ -28,7 +16,7 @@ export default class ListArticlesContainer extends PureComponent {
             left: 'Older',
             right: 'Newer'
         }
-        const { posts } = this.state;
+        const { posts } = this.props;
 
         return (
             <ListArticles titleList={titleList} smallTitleList={smallTitleList} paginationButtonName={paginationButtonName} postsInfoArray={posts} />
@@ -36,3 +24,18 @@ export default class ListArticlesContainer extends PureComponent {
     }
 }
 
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        posts: state.posts.entities,
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListArticlesContainer);
