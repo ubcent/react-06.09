@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import NavMenu from 'components/navmenu';
 import LoginBtn from 'components/loginbtn';
+import './header.css';
 
 const navLinks = [
     {
         'name': 'main',
-        'link': '/index.html'
+        'link': '/index.html',
     }
 ];
 
@@ -13,9 +14,10 @@ export default class Header extends Component {
     render() {
         return (
             <header>
-                This is Header!
-                <NavMenu navLinks={navLinks} />
-                <LoginBtn />
+                <div className="header_content">React Blog
+                    <NavMenu navLinks={navLinks} />
+                    <LoginBtn />
+                </div>
             </header>
         );
     }

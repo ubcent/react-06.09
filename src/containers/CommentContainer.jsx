@@ -1,35 +1,36 @@
 import React, { Component, PureComponent } from 'react';
-import urlutils from 'url';
+import { connect } from 'react-redux';
+
 import Comment from 'components/Comment';
+import { load } from 'actions/comments';
 
-export default class CommentContainer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      comment: {},
-    };
-  }
-
-  // После первого ренденра.
+class CommentContainer extends Component {
   componentDidMount() {
-    const { match } = this.props;
-    const queryParams = urlutils.parse(this.props.location.search, true);
-    console.log(queryParams.query);
-    fetch(`https://jsonplaceholder.typicode.com/comments/${match.params.id}`)
-      .then((response) => response.json())
-      .then((comment) => {
-        this.setState((prevState) => ({
-          ...prevState,
-          comment,
-        }))
-      })
+    const { load } = this.props;
+
+    load();
   }
 
   render() {
-    const { comment } = this.state;
+    const { comment } = this.props;
     return (
       <Comment {...comment} />
     );
   }
 }
+
+function mapStateToProps(state, props) {
+  return {
+    ...props,
+    comment: state.comments.entities.find((comment) => +comment.id === +props.match.params.id),
+  }
+}
+
+function mapDispatchToProps(dispatch, props) {
+  return {
+    ...props,
+    load: () => dispatch(load()),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentContainer)

@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import className from 'classnames';
 import PropTypes from 'prop-types';
+import { Link, withRouter } from 'react-router-dom';
 
-export default class Menu extends PureComponent {
+class Menu extends PureComponent {
     static propTypes = {
-        indexActive: PropTypes.number,
         menu: PropTypes.arrayOf(PropTypes.shape({
             text: PropTypes.string,
             src: PropTypes.string,
@@ -16,7 +15,6 @@ export default class Menu extends PureComponent {
         }),
     };
     static defaultProps = {
-        indexActive: -1,
         menu: [],
         brand: {},
     };
@@ -39,21 +37,20 @@ export default class Menu extends PureComponent {
     }
 
     render() {
-        const { brand, menuArray, indexActive } = this.props;
-        const NavBarClass = className('pr-0 pl-0');
-        const NavClass = className('ml-auto');
+        const { brand, menuArray } = this.props;
+        const { pathname } = this.props.location;
 
         return (
             <div>
-                <Navbar color="dark" dark expand="md" className={NavBarClass}>
+                <Navbar color="dark" dark expand="md" className="pr-0 pl-0">
                     <NavbarBrand href={brand.src}>{brand.text}</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className={NavClass} navbar>
+                        <Nav className="ml-auto" navbar>
                             {menuArray.map((menuName, ind) =>
-                                ind == indexActive ?
-                                    <NavItem key={ind}><NavLink active href={menuName.src}>{menuName.text}</NavLink></NavItem> :
-                                    <NavItem key={ind}><NavLink href={menuName.src}>{menuName.text}</NavLink></NavItem>)
+                                menuName.src == pathname ?
+                                    <NavItem key={ind}><Link className="nav-link active" to={menuName.src}>{menuName.text}</Link></NavItem> :
+                                    <NavItem key={ind}><Link className="nav-link" to={menuName.src}>{menuName.text}</Link></NavItem>)
                             }
                         </Nav>
                     </Collapse>
@@ -62,3 +59,5 @@ export default class Menu extends PureComponent {
         );
     }
 }
+
+export default withRouter(Menu);

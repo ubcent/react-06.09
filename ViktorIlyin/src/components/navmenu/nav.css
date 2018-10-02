@@ -1,0 +1,17 @@
+nav {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav > .ul_menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+li {
+  list-style-type: none;
+}

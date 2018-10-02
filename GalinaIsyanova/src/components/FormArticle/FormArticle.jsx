@@ -11,7 +11,7 @@ export default function FormArticle(props) {
         <div>
             <Article postTitle={postTitle} author={author} datePublished={datePublished} imageSrc={imageSrc}
                 textWithClass={textWithClass} blockquote={blockquote} textWithClassMore={textWithClassMore} />
-            <Comments comments={comments} />
+            <Comments postTitle={postTitle} comments={comments} />
         </div>
     );
 }

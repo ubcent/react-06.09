@@ -1,6 +1,7 @@
 import React, { Component, PureComponent } from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import Header from 'components/Header';
 import Menu from 'components/Menu';
@@ -9,6 +10,7 @@ import CommentsForm from 'components/CommentsForm';
 import CommentsListContainer from 'containers/CommentsListContainer';
 
 import routes from './routes';
+import store from './store';
 
 const creators = ['Vasya Pupkin', 'Petya Ivanov', 'Ivan Sidorov'];
 
@@ -52,6 +54,6 @@ class App extends Component {
 }
 
 ReactDom.render(
-  <BrowserRouter><App /></BrowserRouter>, 
+  <Provider store={store}><BrowserRouter><App /></BrowserRouter></Provider>, 
   document.getElementById('root')
 );
