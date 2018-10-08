@@ -6,7 +6,15 @@ import './header.css';
 const navLinks = [
     {
         'name': 'main',
-        'link': '/index.html',
+        'link': '/',
+    },
+    {
+        'name': 'comments',
+        'link': '/comments',
+    },
+    {
+        'name': 'about',
+        'link': '/about',
     }
 ];
 

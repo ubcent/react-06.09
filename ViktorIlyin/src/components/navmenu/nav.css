@@ -1,17 +1,19 @@
 nav {
   display: inline-block;
 }
-
 nav a {
   text-decoration: none;
   color: white;
 }
-
-nav > .ul_menu > li {
+.nav_item {
+  list-style-type: none;
   display: inline-block;
-  position: relative;
+  margin-left: 10px;
 }
-
 li {
   list-style-type: none;
+}
+.activNav > a {
+  color: goldenrod;
+  text-decoration: underline;
 }
