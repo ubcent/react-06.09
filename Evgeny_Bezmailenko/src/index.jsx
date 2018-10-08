@@ -6,8 +6,11 @@ import './style.css';
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
 
 import routes from './routes';
+import store from './store';
 
 
 import Login from 'components/Login';
@@ -57,6 +60,6 @@ class Layout extends Component {
 }
 
 ReactDom.render(
-    <BrowserRouter><Layout /></BrowserRouter>,
+    <Provider store={store}><BrowserRouter><Layout /></BrowserRouter></Provider>,
     document.getElementById('root')
 );

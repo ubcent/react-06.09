@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
+import { load } from 'actions/posts';
 
 import Articles from 'components/Articles';
+import {connect} from "react-redux";
 
-export default class PostsContainer extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            posts: [],
-        };
-    }
-
+class PostsContainer extends Component {
     componentDidMount() {
-        fetch('/src/posts.json')
-            .then((response) => response.json())
-            .then((posts) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    posts: prevState.posts.concat(posts),
-                }))
-            })
+        const { load } = this.props;
+
+        load();
     }
 
     render() {
-        const { posts } = this.state;
+        const { posts } = this.props;
         return (
             <Articles posts={posts} />
         );
     }
 }
+
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        posts: state.posts.entities,
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostsContainer);

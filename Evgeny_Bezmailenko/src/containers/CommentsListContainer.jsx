@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import CommentsList from 'components/CommentsList';
+import { load } from 'actions/comments';
 
-export default class CommentsListContainer extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            comments: [],
-        };
-    }
-
+class CommentsListContainer extends Component {
     componentDidMount() {
-        const { match } = this.props;
-        const queryParams = urlutils.parse(this.props.location.search, true);
-        console.log(queryParams.query);
-        fetch(`https://jsonplaceholder.typicode.com/posts/${match.params.id}/comments`)
-            .then((response) => response.json())
-            .then((comments) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    comments: prevState.comments.concat(comments),
-                }))
-            })
+        const { load } = this.props;
+
+        load();
     }
 
     render() {
-        const { comments } = this.state;
+        const { comments } = this.props;
         return (
             <CommentsList comments={comments} />
         );
     }
 }
+
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        comments: state.comments.entities,
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsListContainer);
