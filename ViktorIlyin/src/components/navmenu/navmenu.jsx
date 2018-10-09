@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import './nav.css';
 
-export default class NavMenu extends Component {
-    render() {
-        const {navLinks} = this.props;
-        return (
-            <nav>
-                <ul>
-                    {navLinks.map((link) => <li key={link.name}><a href={link.link}>{link.name}</a></li>)}
-                </ul>
-            </nav>
-        );
-    }
+function Nav(props) {
+
+    let loc = props.location.pathname.slice(1);
+    if(loc === '') loc = 'main';
+
+    return (
+        <nav>
+            <ul>
+                {props.navLinks.map((item) => <li key={item.name} className={'nav_item ' + ((item.name === loc)? ' activNav': '')}><Link to={item.link}>{item.name}</Link></li>)}
+            </ul>
+        </nav>)
 }
+
+export default withRouter(Nav);
