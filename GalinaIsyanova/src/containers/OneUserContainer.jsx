@@ -21,7 +21,7 @@ class OneUserContainer extends PureComponent {
 function mapStateToProps(state, props) {
     return {
         ...props,
-        user: state.users.entities.find((user) => +user.id === +props.match.params.id),
+        user: state.users.entities.find((user) => +user.my_id === +props.match.params.id),
     }
 }
 

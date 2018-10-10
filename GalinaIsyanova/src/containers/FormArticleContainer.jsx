@@ -21,7 +21,7 @@ class FormArticleContainer extends PureComponent {
 function mapStateToProps(state, props) {
     return {
         ...props,
-        post: state.posts.entities.find((post) => +post.id === +props.match.params.id),
+        post: state.posts.entities.find((post) => +post.my_id === +props.match.params.id),
     }
 }
 

@@ -9,7 +9,7 @@ export const load = () => (dispatch, getState) => {
 
     if (!state.comments.entities.length) {
         dispatch(loadStarted());
-        fetch('http://localhost:3000/comments')
+        fetch('http://localhost:3000/api/comments')
             .then((response) => response.json())
             .then((comments) => {
                 dispatch(loadCompleted(comments));

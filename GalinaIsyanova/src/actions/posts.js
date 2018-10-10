@@ -9,7 +9,7 @@ export const load = () => (dispatch, getState) => {
 
     if (!state.posts.entities.length) {
         dispatch(loadStarted());
-        fetch('http://localhost:3000/postsInfoArray')
+        fetch('http://localhost:3000/api/posts')
             .then((response) => response.json())
             .then((posts) => {
                 dispatch(loadCompleted(posts));

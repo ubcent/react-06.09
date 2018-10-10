@@ -9,9 +9,10 @@ export const load = () => (dispatch, getState) => {
 
     if (!state.users.entities.length) {
         dispatch(loadStarted());
-        fetch('http://localhost:3000/users')
+        fetch('http://localhost:3000/api/users')
             .then((response) => response.json())
             .then((users) => {
+                console.log(users);
                 dispatch(loadCompleted(users));
             })
             .catch(() => {
