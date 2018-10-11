@@ -1,5 +1,5 @@
 header{
-    background-color: grey;
+    background: grey;
     height: 150px;
 
 }
@@ -37,4 +37,7 @@ h3 {
     color: darkgrey;
     border-radius: 10px;
     margin-top: 45px;
+}
+.container {
+    display: inherit;
 }

@@ -29,7 +29,8 @@ export default class Menu extends Component {
         return (
             <menu className={`menuClass`}>
 
-                {menuItems && <ul className = {menuClass}>
+                {menuItems &&
+                <ul className = {menuClass}>
                     {menuItems.map((menu, idx) => <li key = {idx}>
                         <a href={menu.href}> {menu.label} </a></li>)}
                 </ul>}

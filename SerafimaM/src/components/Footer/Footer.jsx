@@ -10,7 +10,7 @@ export default class Footer extends Component {
         const footerClass = classNames('footer');
         return (
             <footer className={`footerClass`}>
-                <div className="sign">
+                <div className="container">
                     Copyright © 2018 All Rights Reserved
                 </div>
                 <nav className="nav">

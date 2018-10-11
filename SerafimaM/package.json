@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development",
+    "dev:cc": "node cli/components.js --name",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +26,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
     "reactstrap": "^6.4.0"
   },
   "devDependencies": {
@@ -36,6 +39,7 @@
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "minimist": "^1.2.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.18.1",
     "webpack-cli": "^3.1.0",

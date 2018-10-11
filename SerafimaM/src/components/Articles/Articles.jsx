@@ -1,10 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
+
 
 export default function Articles() {
     return (
-        <div>
+        <div className="">
             <h2>React</h2>
             <section>The first project on React was started on September 06.</section>
             <div>

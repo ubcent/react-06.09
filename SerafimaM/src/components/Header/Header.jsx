@@ -32,11 +32,11 @@ export default class Header extends Component {
         const headerClass = classNames('header');
         return (
             <header className={`headerClass`}>
-                <h3>Serafima Madan</h3>
+                <div className="container"><h3>Serafima Madan</h3>
                  <div>{children}</div>
                 <div className="btn">
                     <button type="button"  className="btn btn-default"
-                            onClick={this.handleClick(this.handleClick())}>Login</button></div>
+                            onClick={this.handleClick(this.handleClick())}>Login</button></div></div>
             </header>
         );
     }

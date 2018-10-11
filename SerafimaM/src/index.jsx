@@ -1,13 +1,19 @@
 import React, { Component, PureComponent } from 'react';
 import ReactDom from 'react-dom';
-
+import { BrowserRouter, Switch } from 'react-router-dom';
+import {Link, Route, Router} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import Header from './components/Header';
 import Menu from "./components/Menu";
-import Articles from "./components/Articles";
 import Footer from './components/Footer';
-import Form from './components/Form';
+import FormComments from './components/FormComments';
+import CommentsList from './components/CommentsList';
+
+
+import routes from './routes';
+
 
 const menuItems = [{
     label: 'Home',
@@ -19,11 +25,11 @@ const menuItems = [{
     },
     {
         label: 'Comments',
-        href: '/new'
+        href: '/Comments'
     },
     {
         label: 'Users',
-        href: '/new'
+        href: '/Users'
     },
 ];
 
@@ -37,7 +43,6 @@ class App extends PureComponent {
 
 
     }
-
     constructor(props) {
         super(props);
 
@@ -58,16 +63,22 @@ class App extends PureComponent {
         const {comments} = this.state;
 
         return (
-            <div>
-                <div><Header onButtonClick={this.handleClick} size="big">
+            <div >
+
+                <div ><Header onButtonClick={this.handleClick} size="big">
                     <Menu size='big' menuItems={menuItems}/>
                 </Header></div>
-                <div><Articles/>
-                    <ul>{comments.map((comment, idx) => <li key={idx}>{comment.username}:{comment.message}
-                    </li>)} </ul>
-                    <Form onSend={this.handleSend}/></div>
+                <div className="container">
+                    <Switch>
+                        {routes.map((route, idx) => <Route key={idx} {...route} />)}
+                    </Switch>
 
-                <div><Footer/></div>
+                  <CommentsList comments={ comments }/>
+                    <FormComments onSend={this.handleSend}/>
+
+                </div>
+
+                <div ><Footer/></div>
 
             </div>
 
@@ -75,8 +86,11 @@ class App extends PureComponent {
         );
 
     }
+
 }
 
 
-ReactDom.render(<App/>, document.getElementById('app'));
+ReactDom.render(
+    <BrowserRouter><App /></BrowserRouter>,
+    document.getElementById('app'));
 
