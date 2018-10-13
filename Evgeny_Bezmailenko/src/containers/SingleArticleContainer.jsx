@@ -5,34 +5,35 @@ import SingleArticle from 'components/SingleArticle';
 import { load } from 'actions/posts';
 
 class SingleArticleContainer extends Component {
-    componentDidMount() {
-        const { load } = this.props;
-        load();
-    }
+  componentDidMount() {
+    const { load } = this.props;
 
+    load();
+  }
 
-    render() {
-        const { posts } = this.props;
-        console.log(posts);
-        return (
-            <SingleArticle {...posts} />
-        );
-    }
+  render() {
+    const { post } = this.props;
+    return (
+      <SingleArticle {...post}/>
+    );
+  }
 }
 
 function mapStateToProps(state, props) {
-    return {
-        ...props,
+  const match = props.match.params.id;
 
-        post: state.posts.entities.find((post) => +post.id === +props.match.params.id),
-    }
+  return {
+    ...props,
+    post: state.posts.entities.find((post) => post._id === match),
+
+  }
 }
 
 function mapDispatchToProps(dispatch, props) {
-    return {
-        ...props,
-        load: () => dispatch(load()),
-    };
+  return {
+    ...props,
+    load: () => dispatch(load()),
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleArticleContainer)

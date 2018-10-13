@@ -1,6 +1,6 @@
 import Home from 'components/Home';
 import Posts from 'components/Posts';
-import BlogPost from "components/BlogPost";
+import SingleArticleContainer from 'containers/SingleArticleContainer';
 
 
 export default [
@@ -16,7 +16,7 @@ export default [
     },
     {
         path: '/posts/:id',
-        component: BlogPost,
+        component: SingleArticleContainer,
         exact: true,
-    }
+    },
 ]

@@ -9,7 +9,7 @@ export default class Articles extends Component {
 
                 {this.props.posts.map((post) =>
                     <div className="blog-post" key={post.id}>
-                    <Link className="blog-post-title" to={`/posts/${post.id}`}><h2 className="blog-post-title">{post.title}</h2></Link>
+                    <Link className="blog-post-title" to={`/posts/${post._id}`}><h2 className="blog-post-title">{post.title}</h2></Link>
                         <p className="blog-post-meta">{post.date} by <a href="#">hkgjhgk</a></p>
                         {post.preview}</div>)}
 

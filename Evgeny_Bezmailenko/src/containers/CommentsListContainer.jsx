@@ -5,9 +5,9 @@ import CommentsList from 'components/CommentsList';
 import { load } from 'actions/comments';
 
 class CommentsListContainer extends Component {
+
     componentDidMount() {
         const { load } = this.props;
-
         load();
     }
 
@@ -20,9 +20,11 @@ class CommentsListContainer extends Component {
 }
 
 function mapStateToProps(state, props) {
+  const match = props.id;
+
     return {
         ...props,
-        comments: state.comments.entities,
+      comments: state.comments.entities.filter((elem) => elem.postId === match),
     }
 }
 
