@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Media } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default function OneUser(props) {
     const { imageSrc, name, pageRef } = props;
@@ -14,7 +15,7 @@ export default function OneUser(props) {
                 <Media heading>{name}</Media>
             </Media>
             <div className="card mb-4">
-                <a href={pageRef} className="btn btn-primary">Read More &rarr;</a>
+                <Link to={pageRef} className="btn btn-primary">Read More &rarr;</Link>
             </div>
         </Media>
     );

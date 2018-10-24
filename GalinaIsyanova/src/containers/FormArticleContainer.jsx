@@ -1,33 +1,35 @@
 import React, { PureComponent } from 'react';
 import FormArticle from 'components/FormArticle';
+import { connect } from 'react-redux';
+import { load } from 'actions/posts';
 
-export default class FormArticleContainer extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            post: {},
-        };
-    }
-
+class FormArticleContainer extends PureComponent {
     componentDidMount() {
-        const { match } = this.props;
-
-        fetch(`http://localhost:3000/postsInfoArray/${match.params.id}`)
-            .then((response) => response.json())
-            .then((post) => {
-                this.setState((prevState) => ({
-                    ...prevState,
-                    post,
-                }))
-            });
+        const { load } = this.props;
+        load();
     }
 
     render() {
-        const { post } = this.state;
+        const { post } = this.props;
 
         return (
             <FormArticle {...post} />
         );
     }
 }
+
+function mapStateToProps(state, props) {
+    return {
+        ...props,
+        post: state.posts.entities.find((post) => +post.my_id === +props.match.params.id),
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => dispatch(load()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormArticleContainer);

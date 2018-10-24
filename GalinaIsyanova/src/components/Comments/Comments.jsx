@@ -36,7 +36,7 @@ class Comments extends PureComponent {
                 answerToComments: [],
             };
 
-            fetch(`http://localhost:3000/postsInfoArray/${this.props.match.params.id}`, {
+            fetch(`http://localhost:3000/api/posts/${this.props.match.params.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Accept': 'application/json',
@@ -51,14 +51,14 @@ class Comments extends PureComponent {
             }
         });
 
-        fetch('http://localhost:3000/comments')
+        fetch('http://localhost:3000/api/comments')
             .then((response) => response.json())
             .then((comments) => {
-                const id = comments.pop().id + 1;
+                const id = comments.pop().my_id + 1;
                 const { postTitle } = this.props;
                 const { pathname } = this.props.location;
                 const newComment = {
-                    id: id,
+                    my_id: id,
                     postTitle: postTitle,
                     fullPageRef: pathname,
                     userImageSrc: 'http://placehold.it/50x50',
@@ -67,7 +67,7 @@ class Comments extends PureComponent {
                     answerToComments: [],
                 };
 
-                fetch('http://localhost:3000/comments', {
+                fetch('http://localhost:3000/api/comments', {
                     method: 'post',
                     headers: {
                         'Accept': 'application/json',

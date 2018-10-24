@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function BlogPost(props) {
     const { imgSrcShort, postTitle, postTextShort, fullPageRef, datePublishedShort, author } = props;
@@ -10,11 +11,11 @@ export default function BlogPost(props) {
             <div className="card-body">
                 <h2 className="card-title">{postTitle}</h2>
                 <p className="card-text">{postTextShort}</p>
-                <a href={fullPageRef} className="btn btn-primary">Read More &rarr;</a>
+                <Link to={fullPageRef} className="btn btn-primary">Read More &rarr;</Link>
             </div>
             <div className="card-footer text-muted">
                 Posted on {datePublishedShort} by&nbsp;
-            <a href={author.pageRef}>{author.name}</a>
+            <Link to={author.pageRef}>{author.name}</Link>
             </div>
         </div>
     );
