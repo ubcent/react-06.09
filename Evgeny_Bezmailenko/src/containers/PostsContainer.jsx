@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { load } from 'actions/posts';
-
-import Articles from 'components/Articles';
 import {connect} from "react-redux";
+import Articles from 'components/Articles';
+
 
 class PostsContainer extends Component {
     componentDidMount() {
         const { load } = this.props;
-
         load();
     }
 

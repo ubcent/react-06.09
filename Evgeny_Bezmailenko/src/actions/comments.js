@@ -12,7 +12,7 @@ export const load = () => (dispatch, getState) => {
     if(!state.comments.entities.length) {
         dispatch(loadStarted());
 
-        fetch('https://jsonplaceholder.typicode.com/comments')
+        fetch('http://localhost:3000/api/comments')
             .then((response) => response.json())
             .then((comments) => {
                 dispatch(loadCompleted(comments));

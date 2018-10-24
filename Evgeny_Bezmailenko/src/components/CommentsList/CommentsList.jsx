@@ -8,7 +8,7 @@ export default class CommentsList extends Component {
             <h4>Comments</h4>
                 <hr/>
             <ul className="nav">
-                {this.props.comments.map((comment) => <li key={comment.id}><span className="font-weight-bold">{comment.name}:</span> <p>{comment.body}</p></li>)}
+                {this.props.comments.map((comment) => <li key={comment._id}><span className="font-weight-bold">{comment.name}:</span> <p>{comment.body}</p></li>)}
             </ul>
             </div>
         );
